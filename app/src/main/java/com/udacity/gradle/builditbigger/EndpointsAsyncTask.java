@@ -19,7 +19,7 @@ import java.io.IOException;
  * Created by Vamsi on 2/21/2018.
  */
 
-class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
+public class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
     private static MyApi myApiService = null;
     private Context context;
 
@@ -54,7 +54,7 @@ class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        Toast.makeText(context, result, Toast.LENGTH_LONG).show();
+        Toast.makeText(context, "Ta-Da!", Toast.LENGTH_LONG).show();
         Intent intent = new Intent(context, JokeActivity.class);
         intent.putExtra("Joke", result);
         context.startActivity(intent);
